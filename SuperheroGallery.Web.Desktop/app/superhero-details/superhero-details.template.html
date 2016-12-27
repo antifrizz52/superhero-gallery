@@ -1,0 +1,16 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Name: {{$ctrl.superhero.name}}</span>
+            <p>Rating: {{$ctrl.superhero.rating}}</p>
+            <span>Description: {{$ctrl.superhero.description}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+            <img ng-src="{{$ctrl.superhero.logoUrl}}" class="md-media-lg"></img>
+        </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button ui-sref="superheroApp">Close</md-button>
+        <md-button ng-click="$ctrl.showEditForm()">Edit</md-button>
+    </md-card-actions>
+</md-card>
