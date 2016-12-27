@@ -1,0 +1,33 @@
+<md-dialog style="width: 400px;">
+    <form ng-cloak name="heroForm">
+        <md-toolbar md-colors="{background : 'blue'}">
+            <div class="md-toolbar-tools">
+                <h2>Edit Superhero</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-actions layout="row" layout-align="center center">
+            <md-button ng-click="cancel()" class="md-primary">Close</md-button>
+            <md-button ng-click="save()" ng-disabled="heroForm.$invalid">Save</md-button>
+        </md-dialog-actions>
+
+        <md-dialog-content>
+            <div class="md-dialog-content" layout="column" flex>
+                <md-input-container>
+                    <label>Name</label>
+                    <input ng-model="superhero.name" type="text" maxlength="30" md-maxLength="30" required />
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Rating</label>
+                    <input ng-model="superhero.rating" type="number" step="1" min="0" max="5" required />
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Description</label>
+                    <textarea ng-model="superhero.description" maxlength="150" md-maxLength="150" rows="5" />
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>
