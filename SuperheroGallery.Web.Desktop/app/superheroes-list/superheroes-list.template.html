@@ -1,9 +1,9 @@
 <md-list flex style="padding: 0">
-    <md-list-item class="md-2-line" ng-repeat="hero in $ctrl.superheroes" ui-sref="superheroDetails({id: hero.id})" ui-sref-active="active">
-        <img ng-src="{{hero.logoUrl}}" class="md-avatar" alt="{{hero.name}}"/>
+    <md-list-item class="md-2-line" ng-repeat="hero in $ctrl.superheroes" ui-sref="superheroDetails({id: hero.Id})" ui-sref-active="active">
+        <img ng-src="{{hero.LogoUrl}}" class="md-avatar" alt="{{hero.Name}}"/>
         <div class="md-list-item-text" layout="column">
-            <h3><strong>{{hero.name}}</strong><h3>
-            <p>Rating: {{hero.rating}}<p>
+            <h3><strong>{{hero.Name}}</strong></h3>
+            <p>Rating: {{hero.Rating}}</p>
         </div>
     </md-list-item>
 </md-list>
