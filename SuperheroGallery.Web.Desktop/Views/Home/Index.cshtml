@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="superheroApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <base href="/">
+    <title>Superhero gallery</title>
+    @Scripts.Render("~/bundles/bower_components")
+    @Scripts.Render("~/bundles/app")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <md-toolbar md-colors="{background : 'blue'}">
+        <div class="md-toolbar-tools">
+            <span>Superhero Gallery</span>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <div layout="row">
+            <div flex="33">
+                <ui-view name="superheroesList" />
+            </div>
+            <div flex="66">
+                <ui-view name="superheroDetails" />
+            </div>
+        </div>
+    </md-content>
+    @*    @Scripts.Render("~/bundles/jquery")*@
+    @*    @Scripts.Render("~/bundles/bootstrap")*@
+</body>
+</html>

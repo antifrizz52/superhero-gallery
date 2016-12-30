@@ -23,16 +23,14 @@ $locationProvider.html5Mode(true);
                 }
             }
         },
-
         {
             name: 'superheroDetails',
             parent: 'superheroApp',
             url: '/:id',
             resolve: {
-                superhero: function($stateParams, superheroes) {
-                    return superheroes.find(function(superhero) {
-                        return superhero.id == $stateParams.id;
-                    });
+                superhero: function ($stateParams, SuperheroService) {
+                    console.log($stateParams.id);
+                    return SuperheroService.getHero($stateParams.id);
                 }
             },
             views: {
@@ -41,7 +39,7 @@ $locationProvider.html5Mode(true);
                 }
             }
         }
-    ]
+    ];
 
     states.forEach(function(state) {
         $stateProvider.state(state);
