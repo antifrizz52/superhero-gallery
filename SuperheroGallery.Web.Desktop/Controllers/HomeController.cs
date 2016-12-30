@@ -10,8 +10,6 @@ namespace SuperheroGallery.Web.Desktop.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
     }
