@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('SuperheroEdit', []);
+    angular.module('superheroEdit', []);
 })();

@@ -1,6 +1,7 @@
 var superheroApp = angular.module('superheroApp', [
     'superheroesList',
     'superheroDetails',
+    'superheroEdit',
     'ngMaterial',
     'ui.router'
 ]);
@@ -14,7 +15,7 @@ $locationProvider.html5Mode(true);
             url: '/heroes',
             resolve: {
                 superheroes: function(SuperheroService) {
-                    return SuperheroService.getHeroes();
+                   SuperheroService.fetchHeroes();
                 }
             },
             views: {
@@ -29,8 +30,7 @@ $locationProvider.html5Mode(true);
             url: '/:id',
             resolve: {
                 superhero: function ($stateParams, SuperheroService) {
-                    console.log($stateParams.id);
-                    return SuperheroService.getHero($stateParams.id);
+                    SuperheroService.fetchHero($stateParams.id);
                 }
             },
             views: {
