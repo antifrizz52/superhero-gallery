@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SuperheroGallery.Web.Desktop.Models
 {
-    public class Hero
+    public class HeroModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
