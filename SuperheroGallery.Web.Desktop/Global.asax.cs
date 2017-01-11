@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using SuperheroGallery.Web.Desktop.App_Start;
+using SuperheroGallery.Web.Desktop.Utils;
 
 namespace SuperheroGallery.Web.Desktop
 {
@@ -13,6 +15,9 @@ namespace SuperheroGallery.Web.Desktop
     {
         protected void Application_Start()
         {
+            AutofacConfig.ConfigureContainer();
+            MapConfig.RegisterMappings();
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
