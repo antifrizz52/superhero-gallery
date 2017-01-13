@@ -2,6 +2,7 @@ var superheroApp = angular.module('superheroApp', [
     'superheroesList',
     'superheroDetails',
     'superheroEdit',
+    'superheroRating',
     'ngMaterial',
     'ui.router'
 ]);

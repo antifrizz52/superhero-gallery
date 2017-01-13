@@ -37,7 +37,8 @@ namespace SuperheroGallery.Web.Desktop
 
             bundles.Add(new StyleBundle("~/Content/css")
                 .Include("~/Content/bootstrap.css", "~/Content/site.css")
-                .Include("~/bower_components/angular-material/angular-material.css"));
+                .Include("~/bower_components/angular-material/angular-material.css")
+                .Include("~/app/content/styles/rating.css"));
         }
     }
 }
