@@ -1,7 +1,6 @@
 angular
     .module('superheroDetails', ['ngMaterial'])
     .component('superheroDetails', {
-        bindings: {superhero: '<'},
         templateUrl: 'app/superhero-details/superhero-details.template.html',
         controller: function SuperheroDetailsController($scope, $mdDialog) {
             this.showEditForm = function($event) {

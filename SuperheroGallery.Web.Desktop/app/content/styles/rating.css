@@ -1,0 +1,48 @@
+.rating-container {
+  padding-bottom: 10px;
+}
+
+.rating-container label {
+  font-size: 11px;
+  vertical-align: top;
+  padding-left: 3px;
+  color: rgba(0,0,0,0.54); 
+}
+
+.rating {
+  font-size: 0;
+  display: flex;
+}
+
+.rating-stars {
+  display: inline-block;
+  font-size: 16pt;
+}
+
+.rating-stars span {
+  outline: none;
+  color:gold;
+  float: right;
+  padding-left: 2px;
+}
+
+.star:last-child {
+  padding-left: 0;
+}
+
+.star-filled:last-child {
+  padding-left: 0;
+}
+
+.star::before {
+  content: "\2606";
+}
+
+.star-filled::before {
+  content: "\2605";
+}
+
+.star.hoverable:hover::before,
+.star.hoverable:hover ~ .star.hoverable::before {
+  content: "\2605";
+}
