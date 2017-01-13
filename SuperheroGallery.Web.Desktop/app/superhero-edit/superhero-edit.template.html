@@ -13,15 +13,15 @@
 
         <md-dialog-content>
             <div class="md-dialog-content" layout="column" flex>
-                <md-input-container>
+                <md-input-container md-no-float>
                     <label>Name</label>
                     <input ng-model="superhero.Name" type="text" maxlength="30" md-maxLength="30" required />
                 </md-input-container>
 
-                <md-input-container>
+                <div class="rating-container">
                     <label>Rating</label>
-                    <input ng-model="superhero.Rating" type="number" step="1" min="0" max="5" required />
-                </md-input-container>
+                    <superhero-rating superhero="superhero" is-readonly="false"></superhero-rating>
+                </div>
 
                 <md-input-container>
                     <label>Description</label>
