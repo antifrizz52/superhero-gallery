@@ -2,12 +2,13 @@ angular
     .module('superheroDetails', ['ngMaterial'])
     .component('superheroDetails', {
         templateUrl: 'app/superhero-details/superhero-details.template.html',
-        controller: function SuperheroDetailsController($scope, $mdDialog) {
+        controller: function SuperheroDetailsController($rootScope, $state, $scope, $mdDialog, SuperheroService) {
+
+            _setState();
+
             this.showEditForm = function($event) {
+                var heroCopy = angular.copy($scope.$ctrl.superhero);
 
-                var heroCopy = angular.copy($scope.$parent.$resolve.superhero);
-
-                var confirm = 
                 $mdDialog.show({
                     controller: DialogController,
                     templateUrl: 'app/superhero-edit/superhero-edit.template.html',
@@ -15,13 +16,11 @@ angular
                     clickOutsideToClose: true,
                     locals: {superhero: heroCopy}
                 });
-
-                confirm
-                    .then(function(result){
-                    angular.extend($scope.$parent.$resolve.superhero, result);
-                }).catch(function(){
-                });
             };
+
+            $rootScope.$on('event:hero-updated', function(){
+                _setState();
+            })
 
             function DialogController($scope, $mdDialog, superhero) {
                 $scope.superhero = superhero;
@@ -35,8 +34,13 @@ angular
                 };
 
                 $scope.save = function() {
-                    $mdDialog.hide(superhero);
+                    SuperheroService.saveHero(superhero);
+                    $mdDialog.hide();
                 };
             };
+
+            function _setState(){
+                $scope.$ctrl.superhero = SuperheroService.getHero($state.params.id);
+            }
         }
 });

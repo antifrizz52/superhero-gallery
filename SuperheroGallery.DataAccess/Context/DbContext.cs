@@ -31,7 +31,7 @@ namespace SuperheroGallery.DataAccess.Context
                         Name = "Superman",
                         Rating = 4,
                         Description = "Superman bla bla bla",
-                        LogoUrl = "app/heroes/superman-logo.png"
+                        LogoUrl = "app/content/img/heroes/superman-logo.png"
                     },
                     new Hero
                     {
@@ -39,7 +39,7 @@ namespace SuperheroGallery.DataAccess.Context
                         Name = "Batman",
                         Rating = 4,
                         Description = "Batman bla bla bla",
-                        LogoUrl = "app/heroes/batman-logo.png"
+                        LogoUrl = "app/content/img/heroes/batman-logo.png"
                     },
                     new Hero
                     {
@@ -47,7 +47,7 @@ namespace SuperheroGallery.DataAccess.Context
                         Name = "Spiderman",
                         Rating = 3,
                         Description = "Spiderman",
-                        LogoUrl = "app/heroes/spiderman-logo.png"
+                        LogoUrl = "app/content/img/heroes/spiderman-logo.png"
                     },
                     new Hero
                     {
@@ -55,7 +55,7 @@ namespace SuperheroGallery.DataAccess.Context
                         Name = "Hulk",
                         Rating = 5,
                         Description = "Hulk bla bla bla",
-                        LogoUrl = "app/heroes/hulk-logo.png"
+                        LogoUrl = "app/content/img/heroes/hulk-logo.png"
                     },
                     new Hero
                     {
@@ -63,7 +63,7 @@ namespace SuperheroGallery.DataAccess.Context
                         Name = "Ironman",
                         Rating = 5,
                         Description = "Ironman bla bla bla",
-                        LogoUrl = "app/heroes/ironman-logo.png"
+                        LogoUrl = "app/content/img/heroes/ironman-logo.png"
                     }
                 };
 
